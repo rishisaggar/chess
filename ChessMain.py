@@ -13,7 +13,7 @@ images = {}
 def loadImages():
     pieces = ["wP","wR","wN","wB","wQ","wK","bP","bR","bN","bB","bQ","bK"]
     for piece in pieces:
-        images[piece] = p.transform.scale(p.image.load("images/" + piece +".png"),(sqsize,sqsize))
+        images[piece] = p.transform.scale(p.image.load(piece +".png"),(sqsize,sqsize))
         
 def main():
     p.init()
