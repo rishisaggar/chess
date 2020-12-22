@@ -369,10 +369,6 @@ class GameState():
             if not self.squareUnderAttack(r, c - 1) and not self.squareUnderAttack(r, c - 2):
                 moves.append(Move((r, c), (r, c - 2), self.board, isCastleMove = True))
 
-
-    ###
-    #Not working
-    ###
     def minimax(self, board, tempBoard, depth, isMaximisingPlayer):
         originalBoard = deepcopy(tempBoard)
         if depth == 0 or self.checkMate or self.stalemate:
@@ -437,12 +433,8 @@ class GameState():
             for c in range(len(self.board[r])):
                 if self.board[r][c] != '--':
                     score += values[self.board[r][c]]
-        return score        
-    ###
-    ###
-    ###
+        return score
                 
-
 
 class castleRights():
 
